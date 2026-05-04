@@ -1,0 +1,291 @@
+/* ---------- Tokens ---------- */
+:root {
+  --bg: #fafaf6;
+  --bg-alt: #f1efe8;
+  --text: #1a1c1a;
+  --text-muted: #5a5d59;
+  --rule: #e2e0d6;
+  --accent: #2e5d4f;
+  --accent-hover: #1f4338;
+  --max-width: 880px;
+  --max-width-wide: 880px;
+  --serif: "Fraunces", "Iowan Old Style", "Charter", Cambria, Georgia, serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* ---------- Reset ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img { max-width: 100%; display: block; }
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: color 120ms ease;
+}
+a:hover { color: var(--accent-hover); }
+
+h1, h2, h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  margin: 0 0 0.6em;
+}
+
+h1 { font-size: clamp(2rem, 4.5vw, 3.1rem); line-height: 1.15; letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.5rem, 2.5vw, 1.9rem); line-height: 1.2; }
+
+p { margin: 0 0 1.1em; }
+
+/* ---------- Layout ---------- */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section { padding: 3rem 0; border-top: 1px solid var(--rule); }
+.section-alt { background: var(--bg-alt); }
+
+/* ---------- Header / Nav ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(250, 250, 246, 0.85);
+  backdrop-filter: saturate(140%) blur(8px);
+  -webkit-backdrop-filter: saturate(140%) blur(8px);
+  border-bottom: 1px solid var(--rule);
+}
+.header-inner {
+  max-width: var(--max-width-wide);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  gap: 1rem;
+}
+.brand {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.05rem;
+  text-decoration: none;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+.primary-nav {
+  display: flex;
+  gap: 1.6rem;
+}
+.primary-nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+.primary-nav a:hover { color: var(--accent); }
+.primary-nav a[aria-current="page"] {
+  color: var(--text);
+  border-bottom: 1.5px solid var(--accent);
+  padding-bottom: 2px;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  padding: 2rem 0 1.25rem;
+}
+.hero h1 {
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  max-width: 28ch;
+  margin: 0;
+}
+
+/* Page header (Writing / Media pages) */
+.page-header {
+  padding: 2.5rem 0 1rem;
+}
+.page-header h1 {
+  font-size: clamp(1.8rem, 3.4vw, 2.4rem);
+  margin: 0 0 0.6rem;
+}
+.page-header .section-intro {
+  margin-bottom: 0;
+}
+
+/* ---------- About ---------- */
+.about-grid {
+  max-width: var(--max-width-wide);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 3rem;
+  align-items: start;
+}
+.about-copy { max-width: none; }
+.meta-line {
+  margin-top: 2rem;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--rule);
+  padding-top: 1.2rem;
+}
+
+.about-aside { position: sticky; top: 6rem; }
+.headshot-frame {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: var(--bg-alt);
+  border: 2px solid var(--rule);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  object-fit: cover;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+.headshot-placeholder {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+}
+
+/* ---------- Writing ---------- */
+.section-intro {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.writing-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid var(--rule);
+}
+.writing-list li {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.writing-title {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+  line-height: 1.35;
+}
+.writing-title:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.writing-venue {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+/* ---------- Contact ---------- */
+.contact-block { max-width: none; }
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  border-top: 1px solid var(--rule);
+}
+.contact-list li {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 1.5rem;
+  align-items: baseline;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.contact-label {
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  border-top: 1px solid var(--rule);
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.footer-inner {
+  max-width: var(--max-width-wide);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.back-to-top {
+  text-decoration: none;
+  color: var(--text-muted);
+}
+.back-to-top:hover { color: var(--accent); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 720px) {
+  body { font-size: 16px; }
+
+  .hero { padding: 2.25rem 0 1.5rem; }
+  .section { padding: 3.5rem 0; }
+
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+  .primary-nav { gap: 1.2rem; }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .about-copy { order: 2; }
+  .about-aside {
+    order: 1;
+    position: static;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+
+  .contact-list li {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
