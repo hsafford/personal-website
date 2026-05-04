@@ -4,3 +4,7 @@ Thumbs.db
 .idea/
 .vscode/
 node_modules/
+
+# Source materials (not part of deployed site)
+*.docx
+*.pdf
