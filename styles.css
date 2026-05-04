@@ -117,10 +117,10 @@ p { margin: 0 0 1.1em; }
 
 /* Page header (Writing / Media pages) */
 .page-header {
-  padding: 2.5rem 0 1rem;
+  padding: 1rem 0 0.5rem;
 }
-.page-header h1 {
-  font-size: clamp(1.8rem, 3.4vw, 2.4rem);
+.page-header h2 {
+  font-size: clamp(1.5rem, 2.5vw, 1.9rem);
   margin: 0 0 0.6rem;
 }
 .page-header .section-intro {
@@ -175,7 +175,6 @@ p { margin: 0 0 1.1em; }
   list-style: none;
   padding: 0;
   margin: 0;
-  border-top: 1px solid var(--rule);
 }
 .writing-list li {
   padding: 1rem 0;
@@ -185,12 +184,12 @@ p { margin: 0 0 1.1em; }
   gap: 0.3rem;
 }
 .writing-title {
-  font-family: var(--serif);
-  font-size: 1.15rem;
+  font-family: var(--sans);
+  font-size: 1.05rem;
   font-weight: 500;
   color: var(--text);
   text-decoration: none;
-  line-height: 1.35;
+  line-height: 1.4;
 }
 .writing-title:hover {
   color: var(--accent);
