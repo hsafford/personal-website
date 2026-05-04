@@ -58,7 +58,7 @@ p { margin: 0 0 1.1em; }
   padding: 0 1.5rem;
 }
 
-.section { padding: 3rem 0; border-top: 1px solid var(--rule); }
+.section { padding: 1.5rem 0 3rem; border-top: 1px solid var(--rule); }
 .section-alt { background: var(--bg-alt); }
 
 /* ---------- Header / Nav ---------- */
@@ -240,7 +240,7 @@ p { margin: 0 0 1.1em; }
   body { font-size: 16px; }
 
   .hero { padding: 2.25rem 0 1.5rem; }
-  .section { padding: 3.5rem 0; }
+  .section { padding: 1.25rem 0 2.5rem; }
 
   .header-inner {
     flex-direction: column;
