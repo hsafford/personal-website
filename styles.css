@@ -115,18 +115,6 @@ p { margin: 0 0 1.1em; }
   margin: 0;
 }
 
-/* Page header (Writing / Media pages) */
-.page-header {
-  padding: 1rem 0 0.5rem;
-}
-.page-header h2 {
-  font-size: clamp(1.5rem, 2.5vw, 1.9rem);
-  margin: 0 0 0.6rem;
-}
-.page-header .section-intro {
-  margin-bottom: 0;
-}
-
 /* ---------- About ---------- */
 .about-grid {
   max-width: var(--max-width-wide);
