@@ -171,6 +171,7 @@ p { margin: 0 0 1.1em; }
   flex-direction: column;
   gap: 0.3rem;
 }
+.writing-list li:first-child { padding-top: 0; }
 .writing-list li:last-child { border-bottom: none; }
 .writing-title {
   font-family: var(--sans);
